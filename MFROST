@@ -1,0 +1,71 @@
+//PROGRAM DASAR GERAK ROBOT
+//Motor A
+const int motorPin1  = 5;  // Pin 14 of L293
+const int motorPin2  = 6;  // Pin 10 of L293
+//Motor B
+const int motorPin3  = 10; // Pin  7 of L293
+const int motorPin4  = 9;  // Pin  2 of L293
+
+void setup(){
+ 
+    //Set pins as outputs
+    pinMode(motorPin1, OUTPUT);
+    pinMode(motorPin2, OUTPUT);
+    pinMode(motorPin3, OUTPUT);
+    pinMode(motorPin4, OUTPUT);
+    
+	//Inisialisasi Kecepatan Awal Motor
+  	digitalWrite(motorPin1, LOW);
+    digitalWrite(motorPin2, LOW);
+    digitalWrite(motorPin3, LOW);
+    digitalWrite(motorPin4, LOW);
+  
+}
+
+
+void loop(){
+  kanan();
+  delay(1000);
+  kiri();
+  delay(1000);
+  maju();
+  delay(1000);
+  stop()
+  delay(1000);
+
+}
+
+void kanan(int det){
+	digitalWrite(motorPin1, HIGH);
+    digitalWrite(motorPin2, LOW);
+    digitalWrite(motorPin3, LOW);
+    digitalWrite(motorPin4, LOW); 
+}
+
+void kiri(){
+  	digitalWrite(motorPin1, LOW);
+    digitalWrite(motorPin2, LOW);
+    digitalWrite(motorPin3, HIGH);
+    digitalWrite(motorPin4, LOW);
+}
+
+void maju(){
+ 	digitalWrite(motorPin1, HIGH);
+    digitalWrite(motorPin2, LOW);
+    digitalWrite(motorPin3, HIGH);
+    digitalWrite(motorPin4, LOW  
+}
+
+void mundur(){
+ 	digitalWrite(motorPin1, LOW);
+    digitalWrite(motorPin2, HIGH);
+    digitalWrite(motorPin3, LOW);
+    digitalWrite(motorPin4, HIGH);
+}
+
+void stop(){
+ 	digitalWrite(motorPin1, LOW);
+    digitalWrite(motorPin2, LOW);
+    digitalWrite(motorPin3, LOW);
+    digitalWrite(motorPin4, LOW); 
+}
